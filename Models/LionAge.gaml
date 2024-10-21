@@ -1,7 +1,7 @@
 /**
 * Name: LionAge
 * Based on the internal empty template. 
-* Author: Dastan
+* Author: Dastan Nurbekuly
 * Tags: 
 */
 
