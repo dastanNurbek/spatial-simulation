@@ -34,8 +34,9 @@ global {
 }
 
 species cows skills:[moving] {
-	int action_radius <- 50;
+	int action_radius <- 100;
 	geometry action_area; 
+	list<grass> grass_within_area;
 	grass best_spot;
 	list<grass> grass_within_reach;
 	grass available_to_eat;
@@ -44,26 +45,22 @@ species cows skills:[moving] {
 		action_area <- circle(action_radius);
 	}
 	reflex graze {
-		best_spot <- (grass overlapping action_area) closest_to self; // finds best spot
-		if best_spot.biomass >= 0.4 { // checks if biomass greater than 0.4
-			write best_spot;
-			do goto target: best_spot; // goes to the location
-			if self distance_to best_spot <= 2 and best_spot.biomass >= 0.4{ // checks if it reached the target
-				grass_within_reach <- grass intersecting(circle(3)); // gets grass that are within reach
-				loop i from: 0 to: (length(grass_within_reach)-1){ // loops through the grass within reach
-					ask grass_within_reach[i] { // asks the grass to lose biomass
-						if biomass >= 0.4{
-							biomass <- biomass - 0.4;
-						}
-					}
+		grass_within_area <- grass intersecting(action_area); // gets every grass within action area
+		loop i from: 0 to: (length(grass_within_area)-1){ // finds the first eligible grass, e.g. best spot
+			ask grass_within_area[i] { 
+				if biomass >= 0.4 {
+					myself.best_spot <- myself.grass_within_area[i];
+					i <- length(myself.grass_within_area)-1;
 				}
 			}
 		}
-		else {
-			best_spot <- one_of (grass at_distance(action_radius)); // finds other best spot
-			if best_spot.biomass >= 0.4 { // checks if biomass greater than 0.4
-				write best_spot;
-				do goto target: best_spot; // goes to the location
+		do goto target: best_spot; // goes to best spot
+		grass_within_reach <- grass intersecting(circle(3)); // gets grass that are within reach
+		loop i from: 0 to: (length(grass_within_reach)-1){ // loops through the grass within reach
+			ask grass_within_reach[i] { // asks the grass to lose biomass if over 0.4
+				if biomass >= 0.4{
+					biomass <- biomass - 0.4;
+				}
 			}
 		}
 	}
@@ -114,19 +111,18 @@ grid grass cell_width: 5#m cell_height: 5#m{
 	}
 	rgb color <- is_cleaned_2020 or is_cleaned_2021_2023 or is_hirschanger or is_meadow
 	? rgb(int(255 * (1 - biomass)), 255, int(255 * (1 - biomass))) 
-	: rgb(235, 186, 52) 
+	: rgb(130, 111, 61) 
 	update: is_cleaned_2020 or is_cleaned_2021_2023 or is_hirschanger or is_meadow 
 	? rgb(int(255 * (1 - biomass)), 255, int(255 * (1 - biomass)))
-	: rgb(235, 186, 52);
+	: rgb(130, 111, 61);
 }
 
 experiment main_experiment type:gui {
 	output {
 		display map {
 			grid grass;
+			species cows aspect:action_neighborhood transparency: 0.7;
 			species cows aspect:default;
-			species cows aspect:action_neighborhood transparency: 0.5;
 		}
 	}
 }
-
