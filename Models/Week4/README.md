@@ -61,8 +61,11 @@ reflex grow {
 }
 ```
 ## Results
-a)<img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_1_time_1731354104241.png" alt="1" width="500"/>\
-b)<img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_146_time_1731354132494.png" alt="1" width="500"/>\
-c)<img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_469_time_1731354190818.png" alt="1" width="500"/>\
+a) <img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_1_time_1731354104241.png" alt="1" width="500"/>\
+b) <img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_146_time_1731354132494.png" alt="1" width="500"/>\
+c) <img src="../Week4/models/snapshots/Vierkaser_model_display_map_cycle_469_time_1731354190818.png" alt="1" width="500"/>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1. Simulation snapshots. (a) cycle 1, (b) cycle 146, (c) cycle 469.\
+\
+According to the results of the simulation (see Fig. 1), the cows quickly spread out across the grassland. As they do, the reduced biomass recovers over time, and cows don’t run out of grass.
 ## Discussion
 This experiment was an introduction to spatial interactions of agents in GAML. The most important parameters of the model were the radius of action area and biomass growth rate.
