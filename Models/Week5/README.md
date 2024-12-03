@@ -56,11 +56,14 @@ reflex calculate_mean_eaten_biomass {
 ```
 ## Results
 ![alt text](../Week5/models/snapshots/Charts_model_display_chart0_cycle_255_time_1733150328916.png)\
-Figure 1. Minimum, maximum, and mean biomass.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 1. Minimum, maximum, and mean biomass.\
+\
 ![alt text](../Week5/models/snapshots/Charts_model_display_chart1_cycle_255_time_1733150324002.png)\
-Figure 2. Mean eaten grass by cows.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 2. Mean eaten grass by cows.\
+\
 ![alt text](../Week5/models/snapshots/Charts_model_display_chart2_cycle_255_time_1733150326900.png)\
-Figure 3. Mean biomass over mean eaten biomass.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 3. Mean biomass over mean eaten biomass.\
+\
 As seen in Fig. 1, Fig. 2, and Fig. 3 the charts were successfully generated and visualize the data accordingly.
 ## Discussion
 With the help GAMA visualization tools, it is now clear that the system reaches an equilibrium state, where the biomass stays at the level of slightly lower than 0.5 (Figure 1). The minimum biomass crows can graze is equal to 0.4. This also explains why there are many concentrated points around 0.47 in Figure 3. 
