@@ -38,9 +38,9 @@ b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 c)
 <div style="flex">
-  <img src="../Models/Week2/models/snapshots/LionAge_model_display_map_cycle_1_time_1729538568771.png" alt="drawing" width="300"/>
-  <img src="../Models/Week2/models/snapshots/LionAge_model_display_map_cycle_15_time_1729538820792.png" alt="drawing" width="300"/>
-  <img src="../Models/Week2/models/snapshots/LionAge_model_display_map_cycle_31_time_1729538932717.png" alt="drawing" width="300"/>
+  <img src="../Week2/models/snapshots/LionAge_model_display_map_cycle_1_time_1729538568771.png" alt="drawing" width="300"/>
+  <img src="../Week2/models/snapshots/LionAge_model_display_map_cycle_15_time_1729538820792.png" alt="drawing" width="300"/>
+  <img src="../Week2/models/snapshots/LionAge_model_display_map_cycle_31_time_1729538932717.png" alt="drawing" width="300"/>
 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 1. Visualization of lion age means over time. (a) time step: 0, 
