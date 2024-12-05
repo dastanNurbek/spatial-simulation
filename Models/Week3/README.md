@@ -59,5 +59,6 @@ action_area <- line(self.location, {0,0})intersection circle(speed);
 <br />
 As shown in Fig. 1, the brown cow agents perform a random wander movement withing the given 90 degrees angle 
 (yellow cones). Black sheep, however, perform a move to south movement, and goats goto the origin of the map with coordinates {0,0}. 
+
 ### Discussion
 Movements and action neighborhoods are an important tool in spatial simulation for demonstrating agent movements in space, and studying their behavior.
