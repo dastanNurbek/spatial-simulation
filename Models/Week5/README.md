@@ -1,7 +1,7 @@
-# Visualization and Data Export
-## Introduction
+## Visualization and Data Export
+# Introduction
 The aim of this week’s exercise is to learn how to create charts and plots and save results data. 
-## Methods
+# Methods
 To display charts in the output, three displays were added 
 ```java
 display chart0 background: #white {
@@ -54,7 +54,7 @@ reflex calculate_mean_eaten_biomass {
   }
 }
 ```
-## Results
+# Results
 ![alt text](../Week5/models/snapshots/Charts_model_display_chart0_cycle_255_time_1733150328916.png)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 1. Minimum, maximum, and mean biomass.\
 \
@@ -65,5 +65,5 @@ reflex calculate_mean_eaten_biomass {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Figure 3. Mean biomass over mean eaten biomass.\
 \
 As seen in Fig. 1, Fig. 2, and Fig. 3 the charts were successfully generated and visualize the data accordingly.
-## Discussion
+# Discussion
 With the help GAMA visualization tools, it is now clear that the system reaches an equilibrium state, where the biomass stays at the level of slightly lower than 0.5 (Figure 1). The minimum biomass crows can graze is equal to 0.4. This also explains why there are many concentrated points around 0.47 in Figure 3. 
